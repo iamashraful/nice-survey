@@ -1,6 +1,7 @@
-var path = require('path')
-var webpack = require('webpack')
-var BundleTracker = require('webpack-bundle-tracker')
+const path = require('path')
+const webpack = require('webpack')
+const BundleTracker = require('webpack-bundle-tracker')
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 
 module.exports = {
     //the base directory (absolute path) for resolving the entry option
@@ -8,13 +9,15 @@ module.exports = {
     //the entry point we created earlier. Note that './' means 
     //your current directory. You don't have to specify the extension  now,
     //because you will specify extensions later in the `resolve` section
-    entry: './survey/client/src/index', 
+    entry: {
+        main: './survey/client/src/index',
+    }, 
     
     output: {
         //where you want your compiled bundle to be stored
         path: path.resolve('./survey/static/bundles/'), 
         //naming convention webpack should use for your files
-        filename: '[name]-[hash].js',
+        filename: '[name]-bundle.min.js',
     },
     
     plugins: [
@@ -25,7 +28,8 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery'
-        })
+        }),
+        new MinifyPlugin()
     ],
     
     module: {
@@ -96,5 +100,5 @@ module.exports = {
         modules: ['node_modules'],
         //extensions that should be used to resolve modules
         extensions: ['*', '.js', '.jsx']
-    }   
+    }
 };

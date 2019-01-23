@@ -1,7 +1,7 @@
 {
-    "name": "django-react-together",
+    "name": "nice-survey",
     "version": "1.0.0",
-    "description": "Django and React Together",
+    "description": "A survey application written in React and Python",
     "main": "index.js",
     "scripts": {
         "dev": "webpack --watch",
@@ -11,13 +11,16 @@
         "django",
         "django rest framework",
         "react",
-        "webpack"
+        "webpack",
+        "babel",
+        "es6"
     ],
     "author": "Ashraful Islam",
     "license": "MIT",
     "devDependencies": {
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
+        "babel-minify-webpack-plugin": "^0.3.1",
         "babel-preset-es2015": "^6.24.1",
         "babel-preset-react": "^6.24.1",
         "css-loader": "^0.28.7",
