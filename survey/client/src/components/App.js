@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import BaseComponent from "./base/BaseComponent";
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Welcome Sir!</h1>
-      </div>
-    );
-  }
+class App extends BaseComponent {
+    constructor(props) {
+        super(props)
+    }
 }
 
 export default App;
