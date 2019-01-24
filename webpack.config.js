@@ -1,15 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
-const BundleTracker = require('webpack-bundle-tracker')
 const MinifyPlugin = require("babel-minify-webpack-plugin");
 
-let pluginsList = [
-
-    //tells webpack where to store data about your bundles.
-    new BundleTracker({
-        filename: './webpack-stats.json'
-    })
-];
+let pluginsList = [];
 if (process.env.NODE_ENV === 'production') {
     pluginsList.push(
         new MinifyPlugin()

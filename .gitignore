@@ -11,3 +11,6 @@ package-lock.json
 
 static_root/
 .directory
+
+*.egg*
+dist
