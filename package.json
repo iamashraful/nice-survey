@@ -36,6 +36,7 @@
         "webpack-bundle-tracker": "^0.3.0"
     },
     "dependencies": {
-        "bulma": "^0.7.2"
+        "bulma": "^0.7.2",
+        "react-router-dom": "^4.3.1"
     }
 }
