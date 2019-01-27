@@ -17,6 +17,7 @@ module.exports = {
     //because you will specify extensions later in the `resolve` section
     entry: {
         main: './survey/client/src/index',
+        extra: './survey/client/src/extra-chunks',
     },
 
     output: {
