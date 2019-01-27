@@ -35,5 +35,7 @@
         "webpack": "^3.10.0",
         "webpack-bundle-tracker": "^0.3.0"
     },
-    "dependencies": {}
+    "dependencies": {
+        "bulma": "^0.7.2"
+    }
 }
